@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.4/material.indigo-pink.min.css">
+    <script src="https://storage.googleapis.com/code.getmdl.io/1.0.4/material.min.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+    <style>
+      @font-face {
+        font-family: myFirstFont;
+        src: url(sansation_light.woff);
+      }
+      body,h2,h3,div,h4,h6,small {
+        font-family: myFirstFont;
+      }
+      h1,h5 { font-family: 'Lobster', cursive; }
+      .textInImg{
+        position: relative;
+        width: 100%;
+      }
+      .txt{
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 60%;
+      }
+      .section-right {
+        width:220px;
+        margin-left:290px;
+        float:right;
+      }
+    </style>
+  </head>
+  <body align="center">
+    <title>web application architectures</title>
+    <header class="mdl-layout__header mdl-layout__header--scroll mdl-color--primary">
+      <h3 class="mdl-layout--large-screen-only mdl-layout__header-row">Alireza TADBIR </h3>
+      <div class="mdl-layout__tab-bar-container">
+        <div class="mdl-layout__tab-bar mdl-js-ripple-effect mdl-color--primary-dark mdl-js-ripple-effect--ignore-events" data-upgraded=",MaterialRipple">
+          <div data-upgraded=",MaterialRipple" class="mdl-layout__tab-bar mdl-js-ripple-effect mdl-color--primary-dark mdl-js-ripple-effect--ignore-events">
+            <a href="#overview" class="mdl-layout__tab is-active">Table<span data-upgraded=",MaterialRipple" class="mdl-layout__tab-ripple-container mdl-js-ripple-effect"><span style="width: 267.523px; height: 267.523px; transform: translate(-50%, -50%) translate(60px, 26px);" class="mdl-ripple is-animating"></span></span></a>
+            <a href="#features" class="mdl-layout__tab">Modification on Drivy<span data-upgraded=",MaterialRipple" class="mdl-layout__tab-ripple-container mdl-js-ripple-effect"><span style="width: 264.927px; height: 264.927px; transform: translate(-50%, -50%) translate(79px, 37px);" class="mdl-ripple is-animating"></span></span></a>
+          </div>
+        </div>
+    </div>
+    </header>
+    <div><br></div>
+    <div class="textInImg">
+      <img src="IMG/IMG.jpg"></img>
+      <div class="txt">
+        <h1>Drivy</h1>
+        <h5>location entre particuliers</h5>
+      </div>
+  </div>
+  <div><br></div><div><br></div><div><br></div>
+    <main class="mdl-layout__content">
+      <div id="overview" class ="mdl-layout__tab-panel is-active" >
+        <table class="mdl-data-table mdl-js-data-table mdl-data-table--selectable mdl-shadow--2dp" align="center" id="myTable1">
+          <thead>
+            <tr >
+              <th class="mdl-data-table__cell--non-numeric">Rent ID</th>
+              <th>Driver</th>
+              <th>Number Of Days</th>
+              <th>Distance (m)</th>
+              <th>Deductible<br>Reduction</th>
+              <th>Rental Price</th>
+              <th>Rental Price<br>(with reduction)</th>
+              <th>Commision</th>
+              <th>Insurance</th>
+              <th>Assistance</th>
+              <th>Drivy</th>
+            </tr>
+          </thead>
+        </table>
+      </div>
+      <div><br></div><div><br></div><div><br></div><div><br></div>
+      <div id="features" class="mdl-card shopping mdl-cell mdl-cell--12-col" style="padding-left: 7%;">
+        <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
+          <h4>PLEASE CHOOSE THE RENTAL:&nbsp;&nbsp;&nbsp;&nbsp;<select name="thelist" onChange="combo(this, 'theinputo')" id="rentalSelect"></h4>
+          <option disabled selected> -- select an id -- </option>
+          </select>
+          <br><br>
+          <div class="mdl-textfield mdl-js-textfield">
+            <div class="snippet-demo">
+              id: <input class="mdl-textfield__input" type="text" id="theinput" name="theinput" title="id" disabled style="text-align:center;"/>
+            </div>
+            <div class="snippet-demo" align="middle">
+              distance:<input class="mdl-textfield__input" type="text" id="theinput2" name="theinput2" title="distance" style="text-align:center;"/>
+            </div>
+            PickUp Date:<input class="mdl-textfield__input"  type="text" id="theinput3" name="theinput3" title="pickupDate" style="text-align:center;"/>
+            Given Date:<input class="mdl-textfield__input"  type="text" id="theinput4" name="theinput4" title="returnDate" style="text-align:center;"/>
+            <div><br><br></div>
+            <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" onclick="saveChanges()">Save Changes!</button>
+          </div>
+
+            <div class="section-right">
+              <br>  <br>
+            <div class="snippet-demo">
+              Renal Before Modifying: <input class="mdl-textfield__input" type="text" id="theinput5" name="theinput" title="id" disabled style="text-align:center;"/>
+           </div>
+          <!--<div class="snippet-demo">
+              Rental After Modifying: <input class="mdl-textfield__input" type="text" id="theinput6" name="theinput" title="id" disabled style="text-align:center;"/>
+            </div> -->
+          </div>
+      </section>
+
+        <script type="text/javascript" src="file.js"></script>
+      </div>
+    </main>
+    <div><br><br><br><br><br><br></div>
+    <!--<div id="overview" class ="mdl-layout__tab-panel is-active" >
+      <h4>New Modification Table:</h4>
+      <table class="mdl-data-table mdl-js-data-table mdl-data-table--selectable mdl-shadow--2dp" align="center" id="myTable2">
+        <thead>
+          <tr >
+            <th class="mdl-data-table__cell--non-numeric">Rent ID</th>
+            <th>Driver</th>
+            <th>Number Of Days</th>
+            <th>Distance (m)</th>
+            <th>Deductible<br>Reduction</th>
+            <th>Rental Price</th>
+            <th>Rental Price<br>(with reduction)</th>
+            <th>Commision</th>
+            <th>Insurance</th>
+            <th>Assistance</th>
+            <th>Drivy</th>
+          </tr>
+        </thead>
+      </table>
+    </div>-->
+  <footer class="mdl-mega-footer">
+    <a href="mailto:alireza.rtbd@gmail.com?Subject=web application architectures TD1" target="_top"><h6>contact</h6></a>
+  </footer>
+  </body>
+</html>

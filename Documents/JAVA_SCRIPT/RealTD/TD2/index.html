@@ -1,0 +1,44 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+     <title>ARGUS PROJECT</title>
+	<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+	<link href='http://fonts.googleapis.com/css?family=Petit+Formal+Script' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Alegreya+Sans:300,400' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Titillium+Web:400,300' rel='stylesheet' type='text/css'>
+	</head>
+	<body>
+	<div class="content">
+			<div class="wrap">
+				<div class="content-grid">
+			<p><img src="images/top.png" title=""></p>
+				</div>
+				<div class="grid">
+		<p><img src="images/coming.png" title=""></p>
+		<h3>Find out the economical price of 'leboncoin' cars with us, please entre the url here:</h3>
+
+		<form>
+									<input type="text" size="30" value="Paste the url" onblur="if (this.value=='')"  name="url" id="url">
+									<a href="#"><button id="btn" class="btn span btn-4 btn-4a icon-arrow-right" onclick="doAll()"><span></span></button></a>
+                  <script>
+                  function doAll() {
+                    var modules = require('./allModules');
+                    modules.leboncoinModule();
+                    //modules.lacentraleModule();
+                  }
+                  </script>
+									<div id="response"></div>
+
+								</form>
+								<div class="clear"></div>
+								</div>
+		<div class="clear"></div>
+		<div class="footer">
+		<p>Contact us at <a href="mailto:alireza.rtbd@gmail.com"> email</a> </p>
+		</div>
+		<div class="clear"></div>
+		</div>
+		</div>
+		<div class="clear"></div>
+</body>
+</html>
