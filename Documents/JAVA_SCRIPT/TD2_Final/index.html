@@ -21,13 +21,21 @@
 		<form action="http://127.0.0.1:8000/parse" method="POST" >
 									<input type="text" size="30" placeholder="Paste the url" name="url3" id="url3" >
                   <button class="btn span btn-4 btn-4a icon-arrow-right" onclick="doAll()"></button>
-                  <input type="submit" value="Submit">
                   <div><br></div><h1></h1>
 		</form>
+        <div id="avgPrice">sqd</div>
+        <div id="madiv">sqd</div>
     <script>
       function doAll() {
-      var request = new XMLHttpRequest();
+      var request = new XMLHttpRequest(); var string;
       request.open('GET', '/parse', true);
+      if (request.readyState==4 && request.status==200){
+        string=reques.responseText;
+        if(string="good")
+            $('#madiv').html('<img src="Pouce-Leve.jpg"/>');
+        else
+            $('#madiv').html('<img src="Pouce-rouge.jpg"/>');
+      }
       request.send();
       }
     </script>
