@@ -1,0 +1,61 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>ARGUS PROJECT</title>
+        <link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+        <script src="http://code.jquery.com/jquery-1.6.2.min.js"></script>
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+    </head>
+    <body>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                              $('#go').click(function(){
+                                             $('#avgPrice').html.clear;
+                                             $('#avgPrice').html('');
+                                             alert("Please watch the terminal for the result :(");
+                                             var data_url = $('#url3').val();
+                                             var url = "/parse";
+                                             $.ajax({
+                                                    type: "POST",
+                                                    url: url,
+                                                    data: {
+                                                    "input_value": data_url
+                                                    },
+                                                    success: function(data23) {
+                                                    $('#avgPrice').append('<h2 >'+data23+' €</h2><br/>');
+                                                    //alert(data23);
+                                                    },
+                                                    error: function(jqXHR, textStatus, errorThrown) {
+                                                    alert('error ' + "If there is an error you can see the terminal for watching the real result");
+                                                    }
+                                                    
+                                                    });
+                                             });
+                       });
+            </script>
+        <div class="content">
+            <div class="wrap">
+                <div class="content-grid">
+                    <p><img src="images/top.png" title=""></p>
+                </div>
+                <div class="grid">
+                    <p><img src="images/coming.png" title=""></p>
+                    <h3>Find out the economical price of 'leboncoin' cars with us, please entre the url here:</h3>
+                    <form >
+                        <input type="text" size="30" placeholder="Paste the url" id="url3" >
+                        <button id="go" class="btn span btn-4 btn-4a icon-arrow-right">OK</button>
+                        <div><br></div>
+                        <h1 style="color:red"id="avgPrice">click to wath the result</h1>
+                    </form>
+                    <div class="footer">
+                        <div><br></div>
+                        <p>Contact us at <a href="mailto:alireza.rtbd@gmail.com"> email</a> </p>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+            </div>
+            <div class="clear"></div>
+        </div>
+        
+    </body>
+</html>
